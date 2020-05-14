@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Gallery from './components/Gallery';
 
 function App() {
     return (
@@ -9,7 +10,7 @@ function App() {
             <img src={logo} className="App-logo" alt="logo" />
             <div>Gallery</div>
         </header>
-        Gallery component
+        <Gallery />
         </div>
     );
 }
