@@ -3,8 +3,10 @@
     padding: 1em;
     display: grid;
     grid-gap: 0.5em;
-    grid-template-rows: 2em repeat(100, 10em);
+    grid-template-rows: 3em repeat(100, 10em);
     /* First row contains the buttons */
+
+    background-color: var(--gallery-background);
 }
 .gallery img {
     /* The images should cover their entire grid cell */
