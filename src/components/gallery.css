@@ -1,13 +1,16 @@
+/* Always use a CSS class for the component, to avoid messing with your teammates' CSS */
 .gallery {
     padding: 1em;
     display: grid;
     grid-gap: 0.5em;
-    grid-template-rows: repeat(100, 10em);
+    grid-template-rows: 2em repeat(100, 10em);
+    /* First row contains the buttons */
 }
 .gallery img {
+    /* The images should cover their entire grid cell */
+    /* The object-fit property determines how the image should be scaled. "cover" means it should maintain its aspect ratio (maintain its proportions, not be stretched) and clip any parts that go outside the box. */
     width: 100%;
     height: 100%;
-    /* display: block; */
     object-fit: cover;
 }
 .gallery.one-column {
@@ -20,6 +23,7 @@
     grid-template-columns: repeat(3, 1fr);
 }
 .gallery > :first-child {
+    /* The buttons should always cover the entire row */
     grid-column-start: 1;
-    grid-column-end: -1;
+    grid-column-end: -1;  /* last column */
 }
